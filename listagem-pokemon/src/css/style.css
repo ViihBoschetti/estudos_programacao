@@ -1,32 +1,31 @@
 body {
-
     font-family: 'Poppins', sans-serif;
     max-width: 1280px;
     margin: 0 auto;
-
-    background: rgb(248, 204, 71);
-    background: linear-gradient(0deg, rgba(248, 204, 71, 1) 30%, rgba(66, 112, 174, 1) 80%);
-
+    background-color: #5e5b5bad;
+    color: #333333;
 }
 
-body .modo-escuro {
-    background: rgb(94, 71, 15);
-    background: linear-gradient(0deg, rgba(94, 71, 15, 1) 30%, rgba(1, 29, 65, 1) 80%);
-    color: #f5f5f5;
+body.modo-escuro {
+    background-color: #212121;
+    color:black;
 }
 
 header {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     padding: 25px;
 }
 
 header .logo {
-    width: 250px;
+    width: 280px;
+    transition: 0.2s ease-in-out;
 }
 
 header .imagem-botao {
-    width: 50px;
+    width: 65px;
+    transition: 0.2s ease-in-out;
 }
 
 header #botao-alterar-tema {
@@ -39,7 +38,6 @@ header .logo:hover,
 header .imagem-botao:hover,
 main .cartao-pokemon:hover {
     transform: scale(1.05);
-    transition: 0, 2s ease-in-out;
     cursor: pointer;
 }
 
@@ -55,25 +53,31 @@ main .listagem-pokemon {
 }
 
 main .cartao-pokemon {
-    background-color: #cecccc;
+    background-color: #d8e3ec;
     width: 200px;
+    /*depois - colocar 235px*/
     padding: 15px;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 15px;
     border-radius: 15px;
+    transition: 0.2s ease-in-out;
 }
 
 main .cartao-pokemon:hover {
-    background-color: #adafaf;
+    background-color: #96d9d6;
+}
+
+.modo-escuro .cartao-pokemon:hover {
+    background-color: #a8a8a8;
 }
 
 main .cartao-pokemon .informacoes {
     display: flex;
     justify-content: space-between;
-    border: 1px solid #333333;
-    border-radius: 10px;
+    border: 1px solid #333333; /*criar a borda envolta do nome do pokemon*/
+    border-radius: 10px; /*criar arredondamento nas bordas*/
 }
 
 main .cartao-pokemon .informacoes span {
@@ -110,7 +114,7 @@ main .cartao-pokemon .tipo {
 }
 
 .agua {
-    background-color: #3690f0;
+    background-color: #6390f0;
 }
 
 .inseto {
